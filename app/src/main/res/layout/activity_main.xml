@@ -100,8 +100,8 @@
         <Button
             android:id="@+id/start"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:textSize="22dp"
             android:layout_marginLeft="10dp"
             android:text="打开"/>
@@ -109,11 +109,22 @@
         <Button
             android:id="@+id/stop"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:textSize="22dp"
             android:text="关闭"/>
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+        android:padding="5dp"
+        android:text="power by 小舍先生\u00A9计科5161马雅鹏"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textStyle="bold" />
 </LinearLayout>

@@ -57,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         btn1 = (Button)findViewById(R.id.start);
         btn2 = (Button)findViewById(R.id.stop);
         tv_1 = (TextView) findViewById(R.id.tv_1);
@@ -99,9 +101,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // 设置动态回调函数.statusListener是回调函数
             lm.addGpsStatusListener(statusListener);  // 注册状态信息回调.
         }else if (v == btn2){
+            finish();
            // super.onDestroy();
-            super.onStop();
-            lm.removeUpdates(locationListener);
+           // super.onStop();
+           // lm.removeUpdates(locationListener);
         }
 
     }
@@ -161,7 +164,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean isGpsAble(LocationManager lm) {
         return lm.isProviderEnabled(LocationManager.GPS_PROVIDER)?true:false;
     }
-
 
     // 打开设置界面让用户自己设置
     private void openGps(){
